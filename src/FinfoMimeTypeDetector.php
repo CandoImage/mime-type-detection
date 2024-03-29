@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace League\MimeTypeDetection;
 
 use const FILEINFO_MIME_TYPE;
-
 use const PATHINFO_EXTENSION;
 use finfo;
 
@@ -42,7 +41,7 @@ class FinfoMimeTypeDetector implements MimeTypeDetector, ExtensionLookup
     /**
      * Buffer size to read from streams if no other bufferSampleSize is defined.
      */
-    const STREAM_BUFFER_SAMPLE_SIZE_DEFAULT = 4100;
+    private const STREAM_BUFFER_SAMPLE_SIZE_DEFAULT = 4100;
 
     public function __construct(
         string $magicFile = '',
